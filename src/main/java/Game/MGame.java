@@ -1,3 +1,8 @@
+package Game;
+
+import Game.Board;
+import Player.Player;
+
 import java.util.LinkedList;
 
 public class MGame {

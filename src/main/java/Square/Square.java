@@ -1,6 +1,10 @@
+package Square;
+
+import Player.Player;
+
 public class Square {
     String name;
-    Square(int nb){
+    public Square(int nb){
         if(nb == 0){
             name = "Go";
             nb ++;
@@ -15,4 +19,6 @@ public class Square {
     public String toString() {
         return name;
     }
+
+   // public abstract void landedOn(Player player);
 }
