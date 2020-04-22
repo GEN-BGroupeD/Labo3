@@ -1,5 +1,3 @@
-
-
 import java.util.LinkedList;
 
 public class MGame {
@@ -41,9 +39,11 @@ public class MGame {
         return players;
     }
 
-    public void playRound(Player player)
+    public void playRound()
     {
-        player.takeTurn(board, dice);
+        for(int i = 0; i<nbPlayers; i++){
+            players.get(i).takeTurn(board,dice);
+        }
         roundCount++;
     }
 
@@ -55,7 +55,7 @@ public class MGame {
     {
         for(int i = 0; i < MAXROUND; ++i)
         {
-            playRound(players.get(i % nbPlayers));
+            playRound();
         }
     }
 }
