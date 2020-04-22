@@ -9,11 +9,14 @@ public class MGame {
     private LinkedList<Player> players;
     private static final int roundCount = 20;
 
-    public MGame(int mbPlayers)
+    public MGame(int nbPlayers)
     {
+        if(nbPlayers >8 || nbPlayers <2){
+            throw new IllegalArgumentException("Incorrect number of players");
+        }
         dice = new Dice();
         board = new Board();
-        this.nbPlayers = mbPlayers;
+        this.nbPlayers = nbPlayers;
 
 
         players = new LinkedList<Player>();
