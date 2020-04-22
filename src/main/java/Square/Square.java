@@ -4,6 +4,11 @@ import Player.Player;
 
 public class Square {
     String name;
+
+    /**
+     * @brief Constructeur
+     * @param nb
+     */
     public Square(int nb){
         if(nb == 0){
             name = "Go";

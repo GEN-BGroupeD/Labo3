@@ -18,21 +18,19 @@ public class Dice {
     private final static Random rand = new Random(System.currentTimeMillis());
 
     /**
-     * Constructeur
-     *
-     * On lance le dés à la création
+     * @brief Constructeur, dés lancé à la création
      */
     public Dice() {
         roll();
     }
     /**
-     * @return le résultat du lancé
+     * @return (int) le résultat du lancé
      */
     public int getFaceValue() {
         return faceValue;
     }
     /**
-     * Générer un nombre aléatoire entre 1 et 6, pour simuler le lancer de dés.
+     * @brief Générer un nombre aléatoire entre 1 et 6, pour simuler le lancer de dés.
      */
     public void roll() {
         faceValue = rand.nextInt(6) + 1;

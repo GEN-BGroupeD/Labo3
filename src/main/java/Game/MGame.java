@@ -13,6 +13,10 @@ public class MGame {
     private final int MAXROUND = 20;
     private int roundCount = 0;
 
+    /**
+     * @brief Constructeur
+     * @param nbPlayers (int) Nombre de joueurs dans la partie
+     */
     public MGame(int nbPlayers)
     {
         if(nbPlayers >8 || nbPlayers <2){
@@ -31,19 +35,34 @@ public class MGame {
         }
     }
 
+    /**
+     * @brief Renvois le plateau
+     * @return (Board) Plateau
+     */
     public Board getBoard()
     {
         return board;
     }
 
+    /**
+     * @brief Renvois le cup
+     * @return (Cup)   Cup
+     */
     public Cup getCup() {
         return cup;
     }
 
+    /**
+     * Renvois la liste des joueurs
+     * @return (LinkedList<Player>) Liste des joueurs
+     */
     public LinkedList<Player> getPlayers() {
         return players;
     }
 
+    /**
+     * @brief joue un tour
+     */
     public void playRound()
     {
         for(int i = 0; i<nbPlayers; i++){
@@ -52,6 +71,10 @@ public class MGame {
         roundCount++;
     }
 
+    /**
+     * Renvois le tour actuel
+     * @return
+     */
     public int getRoundCount() {
         return roundCount;
     }

@@ -9,6 +9,9 @@ public class Piece {
 
     private static int nbPiece = 0;
 
+    /**
+     * @brief Constructeur
+     */
     public Piece(){
         if(nbPiece >= 7)
         {
@@ -19,16 +22,28 @@ public class Piece {
 
     }
 
+    /**
+     *
+     * @return (Square) Location
+     */
     public Square getLocation()
     {
         return this.location;
     }
 
+    /**
+     *
+     * @param newLocation (Square) newLocation
+     */
     public void setLocation(Square newLocation)
     {
         location = newLocation;
     }
 
+    /**
+     *
+     * @return (String) nom de la piece
+     */
     public String getPieceName()
     {
         return name;
