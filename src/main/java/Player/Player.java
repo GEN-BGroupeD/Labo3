@@ -29,8 +29,8 @@ public class Player {
 
         Square newLocation = board.getSquare(piece.getLocation(),resultDice);
 
-        piece.setLocation(newLocation);
         newLocation.landedOn(this);
+        piece.setLocation(newLocation);
     }
 
     public int getNetWorth()
