@@ -7,6 +7,7 @@ import Square.Square;
 public class Player {
     private String name;
     private Piece piece;
+    private int cash;
 
     public Player(String name, Board board){
      this.name = name;
@@ -31,5 +32,18 @@ public class Player {
         Square newLocation = board.getSquare(piece.getLocation(),resultDice);
 
         piece.setLocation(newLocation);
+    }
+
+    public int getNetWorth()
+    {
+        return cash;
+    }
+
+    public void setCash(int cash)
+    {
+        cash = cash;
+    }
+    public void addCash(int cash) {
+        this.cash += cash;
     }
 }
