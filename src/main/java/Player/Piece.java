@@ -1,3 +1,7 @@
+package Player;
+
+import Square.Square;
+
 public class Piece {
     private String name;
     private Square location;
