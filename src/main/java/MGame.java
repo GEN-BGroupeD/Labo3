@@ -7,7 +7,8 @@ public class MGame {
     private Board board;
     private Dice dice;
     private LinkedList<Player> players;
-    private static final int roundCount = 20;
+    private final int MAXROUND = 20;
+    private int roundCount = 0;
 
     public MGame(int nbPlayers)
     {
@@ -45,11 +46,16 @@ public class MGame {
         player.takeTurn(board, dice);
     }
 
+    public int getRoundCount() {
+        return roundCount;
+    }
+
     public void playGame()
     {
-        for(int i = 0; i < roundCount; ++i)
+        for(int i = 0; i < MAXROUND; ++i)
         {
             playRound(players.get(roundCount % nbPlayers));
+            roundCount++;
         }
     }
 }

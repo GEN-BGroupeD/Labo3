@@ -26,4 +26,12 @@ class MGameTest {
         assertNotNull(monopolyGame.getBoard());
         assertNotNull(monopolyGame.getDice());
     }
+
+    @Test
+    public void APartyHave20Round(){
+        MGame game = new MGame(4);
+        game.playGame();
+
+        assertEquals(20,game.getRoundCount());
+    }
 }

@@ -20,6 +20,6 @@ public class Board {
                 return null;
             }
         }
-        return squares[i+position];
+        return squares[(i+position)%40];
     }
 }
