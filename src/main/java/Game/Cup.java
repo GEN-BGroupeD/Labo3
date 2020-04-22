@@ -5,6 +5,10 @@ public class Cup {
     private Dice[] dice;
     private int rolled;
 
+    /**
+     * Constructeur
+     * @param nbOfDice (int) nombre de dés dans un cup
+     */
     public Cup(int nbOfDice) {
         dice = new Dice[nbOfDice];
         for(int i = 0; i < nbOfDice; i++) {
@@ -12,6 +16,9 @@ public class Cup {
         }
     }
 
+    /**
+     * @brief Lance les dés
+     */
     public void roll() {
         rolled = 0;
         for (Dice dice : dice) {
@@ -19,11 +26,11 @@ public class Cup {
         }
     }
 
+    /**
+     *
+     * @return (int) Valeur obtenue par le lancé
+     */
     public int getRolled() {
         return rolled;
-    }
-
-    public Dice[] getDice() {
-        return dice;
     }
 }
