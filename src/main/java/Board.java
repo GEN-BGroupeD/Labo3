@@ -4,7 +4,7 @@ public class Board {
 
     Board(){
         for(int i = 0; i < sizeBoard;i++){
-            squares[i] = new Square();
+            squares[i] = new Square(i);
         }
     }
 

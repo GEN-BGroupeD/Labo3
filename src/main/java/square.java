@@ -1,13 +1,12 @@
 class Square {
     String name;
-    static int nb = 0;
-    Square(){
+    Square(int nb){
         if(nb == 0){
             name = "Go";
             nb ++;
         }
-        else{
-            name = "Square "+ nb;
+        else {
+            name = "Square " + nb;
             nb++;
         }
     }
