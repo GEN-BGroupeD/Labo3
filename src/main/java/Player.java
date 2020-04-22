@@ -3,9 +3,9 @@ public class Player {
     private Piece piece;
 
     public Player(String name, Board board){
-    this.name = name;
-    piece = new Piece();
-    piece.setLocation(board.getSquare(0));
+     this.name = name;
+     piece = new Piece();
+     piece.setLocation(board.getSquare(0));
     }
 
     public String getName() {

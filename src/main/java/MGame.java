@@ -44,6 +44,7 @@ public class MGame {
     public void playRound(Player player)
     {
         player.takeTurn(board, dice);
+        roundCount++;
     }
 
     public int getRoundCount() {
@@ -54,8 +55,7 @@ public class MGame {
     {
         for(int i = 0; i < MAXROUND; ++i)
         {
-            playRound(players.get(roundCount % nbPlayers));
-            roundCount++;
+            playRound(players.get(i % nbPlayers));
         }
     }
 }
