@@ -16,10 +16,10 @@ class PlayerTest {
     @Test
     void playerCanTakeTurn(){
         Board board = new Board();
-        Dice dice = new Dice();
+        Cup cup = new Cup(2);
         Player player = new Player("Tintin",board);
         String oldCase = player.getPiece().getLocation().toString();
-        player.takeTurn(board,dice);
+        player.takeTurn(board,cup);
         String newCase = player.getPiece().getLocation().toString();
         assertNotEquals(oldCase,newCase);
     }

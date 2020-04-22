@@ -8,7 +8,7 @@ import java.util.LinkedList;
 public class MGame {
     private int nbPlayers;
     private Board board;
-    private Dice dice;
+    private Cup cup;
     private LinkedList<Player> players;
     private final int MAXROUND = 20;
     private int roundCount = 0;
@@ -18,7 +18,7 @@ public class MGame {
         if(nbPlayers >8 || nbPlayers <2){
             throw new IllegalArgumentException("Incorrect number of players");
         }
-        dice = new Dice();
+        cup = new Cup(2);
         board = new Board();
         this.nbPlayers = nbPlayers;
 
@@ -36,8 +36,8 @@ public class MGame {
         return board;
     }
 
-    public Dice getDice() {
-        return dice;
+    public Cup getCup() {
+        return cup;
     }
 
     public LinkedList<Player> getPlayers() {
@@ -47,7 +47,7 @@ public class MGame {
     public void playRound()
     {
         for(int i = 0; i<nbPlayers; i++){
-            players.get(i).takeTurn(board,dice);
+            players.get(i).takeTurn(board,cup);
         }
         roundCount++;
     }

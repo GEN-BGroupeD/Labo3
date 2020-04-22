@@ -24,7 +24,7 @@ class MGameTest {
         MGame game = new MGame(nbPlayers);
         assertNotNull(game.getPlayers().size());
         assertNotNull(game.getBoard());
-        assertNotNull(game.getDice());
+        assertNotNull(game.getCup());
     }
 
     @Test
