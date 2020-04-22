@@ -6,7 +6,7 @@ public class Piece {
     private static int nbPiece = 0;
 
     public Piece(){
-        if(nbPiece >= 8)
+        if(nbPiece >= 7)
         {
             nbPiece = 0;
         }

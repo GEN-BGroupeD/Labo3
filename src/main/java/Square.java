@@ -1,4 +1,4 @@
-class Square {
+public class Square {
     String name;
     Square(int nb){
         if(nb == 0){

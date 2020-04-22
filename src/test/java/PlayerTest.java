@@ -10,13 +10,6 @@ class PlayerTest {
         Player player = new Player(testName,board);
         assertEquals(testName, player.getName());
     }
-    @Test
-    void playerHavePieceAndStartAtGo() {
-        Board board = new Board();
-        Player player = new Player("Tintin", board);
-        assertNotNull(player.getPiece());
-        assertEquals("Go", player.getPiece().getLocation().toString());
-    }
 
     @Test
     void playerCanTakeTurn(){
@@ -27,5 +20,13 @@ class PlayerTest {
         player.takeTurn(board,dice);
         String newCase = player.getPiece().getLocation().toString();
         assertNotEquals(oldCase,newCase);
+    }
+   @Test
+    void playerHavePieceAndStartAtGo() {
+        MGame game = new MGame(2);
+        Board board = new Board();
+        Player player = new Player("Tintin", board);
+        assertNotNull(player.getPiece());
+        assertEquals("Go", player.getPiece().getLocation().toString());
     }
 }

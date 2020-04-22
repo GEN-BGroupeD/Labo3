@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import  java.util.Arrays;
 
 
-class DiceTest {
+public class DiceTest {
     @Test
     void resultBetween1and6(){
         Dice dice = new Dice();

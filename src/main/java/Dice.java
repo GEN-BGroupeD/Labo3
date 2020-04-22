@@ -8,7 +8,7 @@ import java.util.Random;
  * @author Dubuis Hélène, Triponez Michaël
  * @version 1.0
  */
-class Dice {
+public class Dice {
     // la face suppérieur du dés (pour voir la valeur obtenue)
     protected int faceValue;
 

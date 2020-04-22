@@ -7,13 +7,17 @@ public class MGame {
     private Board board;
     private Dice dice;
     private LinkedList<Player> players;
-    private static final int roundCount = 20;
+    private final int MAXROUND = 20;
+    private int roundCount = 0;
 
-    public MGame(int mbPlayers)
+    public MGame(int nbPlayers)
     {
+        if(nbPlayers >8 || nbPlayers <2){
+            throw new IllegalArgumentException("Incorrect number of players");
+        }
         dice = new Dice();
         board = new Board();
-        this.nbPlayers = mbPlayers;
+        this.nbPlayers = nbPlayers;
 
 
         players = new LinkedList<Player>();
@@ -40,13 +44,18 @@ public class MGame {
     public void playRound(Player player)
     {
         player.takeTurn(board, dice);
+        roundCount++;
+    }
+
+    public int getRoundCount() {
+        return roundCount;
     }
 
     public void playGame()
     {
-        for(int i = 0; i < roundCount; ++i)
+        for(int i = 0; i < MAXROUND; ++i)
         {
-            playRound(players.get(roundCount % nbPlayers));
+            playRound(players.get(i % nbPlayers));
         }
     }
 }
