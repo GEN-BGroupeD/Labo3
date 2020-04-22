@@ -2,17 +2,10 @@ package Square;
 
 import Player.Player;
 
-public class Square {
+public abstract class Square {
     String name;
-    public Square(int nb){
-        if(nb == 0){
-            name = "Go";
-            nb ++;
-        }
-        else {
-            name = "Square " + nb;
-            nb++;
-        }
+    public Square(String name){
+        this.name = name;
     }
 
     @Override
@@ -20,5 +13,5 @@ public class Square {
         return name;
     }
 
-   // public abstract void landedOn(Player player);
+   public abstract void landedOn(Player player);
 }
