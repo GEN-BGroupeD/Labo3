@@ -40,7 +40,7 @@ public class Player {
 
     public void setCash(int cash)
     {
-        cash = cash;
+        this.cash = cash;
     }
     public void addCash(int cash) {
         this.cash += cash;
