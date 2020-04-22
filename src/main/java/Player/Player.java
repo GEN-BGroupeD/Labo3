@@ -1,7 +1,7 @@
 package Player;
 
 import Game.Board;
-import Game.Dice;
+import Game.Cup;
 import Square.Square;
 
 public class Player {
@@ -22,11 +22,9 @@ public class Player {
         return piece;
     }
 
-    public void takeTurn(Board board, Dice dice) {
-        dice.roll();
-        int resultDice = dice.getFaceValue();
-        dice.roll();
-        resultDice += dice.getFaceValue();
+    public void takeTurn(Board board, Cup cup) {
+        cup.roll();
+        int resultDice = cup.getRolled();
 
         Square newLocation = board.getSquare(piece.getLocation(),resultDice);
 
