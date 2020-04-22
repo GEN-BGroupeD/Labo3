@@ -4,9 +4,9 @@ import Game.Board;
 import Player.Player;
 
 public class GoToJailSquare extends Square{
-    public GoToJailSquare(String name)
+    public GoToJailSquare()
     {
-        super(name);
+        super("Go to jail");
     }
 
     @Override

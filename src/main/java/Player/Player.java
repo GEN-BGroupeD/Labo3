@@ -7,7 +7,7 @@ import Square.Square;
 public class Player {
     private String name;
     private Piece piece;
-    private int cash;
+    private int cash = 1500;
 
     public Player(String name, Board board){
      this.name = name;

@@ -3,9 +3,9 @@ package Square;
 import Player.Player;
 
 public class IncomeTaxSquare extends Square{
-    public IncomeTaxSquare(String name)
+    public IncomeTaxSquare()
     {
-        super(name);
+        super("Income tax");
     }
 
     @Override

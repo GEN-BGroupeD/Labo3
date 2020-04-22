@@ -3,9 +3,9 @@ package Square;
 import Player.Player;
 
 public class GoSquare extends  Square{
-    public GoSquare(String name)
+    public GoSquare()
     {
-        super(name);
+        super("Go");
     }
 
     @Override

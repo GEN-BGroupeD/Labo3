@@ -1,14 +1,24 @@
 package Game;
 
-import Square.Square;
+import Square.*;
 
 public class Board {
     private int sizeBoard = 40;
     private Square[] squares = new Square[sizeBoard];
 
     public Board(){
-        for(int i = 0; i < sizeBoard;i++){
-            squares[i] = new Square(i);
+        String baseName ="Square ";
+        squares[0] = new GoSquare();
+        squares[4] = new IncomeTaxSquare();
+        squares[30] = new GoToJailSquare();
+
+        int nbSquare = 1;
+        for(int i = 1; i < sizeBoard;i++){
+            if((i ==4)||(i ==30)){
+                i++;
+            }
+                squares[i] = new RegularSquare(baseName+i);
+                nbSquare ++;
         }
     }
 
